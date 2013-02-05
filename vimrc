@@ -85,7 +85,9 @@ endif
 
 " _. Fancy {{{
 if count(g:vimified_packages, 'fancy')
-    Bundle 'Lokaltog/vim-powerline'
+    if has('python') || has('python3')
+        source ~/.vim/functions/powerline.vim
+    endif
 endif
 " }}}
 
